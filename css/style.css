@@ -5,7 +5,106 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+header {
+    width: 100%;
+    height: 60px;
+    color: #242424;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 1280px;
+    height: 32px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+menu {
+    display: flex;
+    align-items: center;
+}
+
+menu a:link,
+a:visited {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration-color: black;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .3s;
+    color: black;
+}
+
+menu a:hover {
+    background-color: black;
+    color: #fafafa;
+}
+
+.logo {
+    width: 162.5px;
+    height: 60px;
+    padding: 12px 0px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
 .banner {
     width: 100%;
-    height: 300px;
+    height: 800px;
+}
+
+#products {
+    width: 100%;
+    height: 1000px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.products-sweatshirt {
+    width: 400px;
+    height: 800px;
+}
+
+.products-sweatshirt img {
+    width: 400px;
+    height: 600px;
+    box-sizing: content-box;
+    border: 1px solid black;
+}
+
+.products-tshirt {
+    width: 400px;
+    height: 800px;
+}
+
+.products-tshirt img {
+    width: 400px;
+    height: 600px;
+    box-sizing: content-box;
+    border: 1px solid black;
+}
+
+.products-pants {
+    width: 400px;
+    height: 800px;
+}
+
+.products-pants img {
+    width: 400px;
+    height: 600px;
+    box-sizing: content-box;
+    border: 1px solid black;
 }
