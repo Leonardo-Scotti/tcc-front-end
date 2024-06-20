@@ -5,12 +5,23 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    transition: .5s;
+}
+
 header {
     width: 100%;
     height: 60px;
     color: #242424;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
 }
 
 nav {
@@ -20,6 +31,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    width: 162.5px;
+    height: 60px;
+    padding: 12px 0px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100%;
 }
 
 menu {
@@ -47,64 +71,74 @@ menu a:hover {
     color: #fafafa;
 }
 
-.logo {
-    width: 162.5px;
-    height: 60px;
-    padding: 12px 0px 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo img {
+main {
     width: 100%;
+    margin: 0 auto;
 }
 
 .banner {
     width: 100%;
-    height: 800px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+section:not(#start) {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 32px 0;
 }
 
 #products {
     width: 100%;
-    height: 1000px;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.products-sweatshirt {
-    width: 400px;
-    height: 800px;
+#products h2 {
+    width: 100%;
+    text-transform: uppercase;
+    height: 64px;
+    line-height: 60px;
+    text-align: center;
 }
 
-.products-sweatshirt img {
-    width: 400px;
-    height: 600px;
-    box-sizing: content-box;
-    border: 1px solid black;
+.product {
+    width: 305px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 0px 8px #24242480;
+    transition: .5s;
 }
 
-.products-tshirt {
-    width: 400px;
-    height: 800px;
+.product:hover {
+    box-shadow: 0px 0px 12px #24242440;
+    transform: scale(1.03);
 }
 
-.products-tshirt img {
-    width: 400px;
-    height: 600px;
-    box-sizing: content-box;
-    border: 1px solid black;
+.product-img {
+    width: 273px;
+    height: 394px;
+    overflow: hidden;
 }
 
-.products-pants {
-    width: 400px;
-    height: 800px;
+.product-img img {
+    width: 100%;
+    box-shadow: 0px 0px 8px black;
 }
 
-.products-pants img {
-    width: 400px;
-    height: 600px;
-    box-sizing: content-box;
-    border: 1px solid black;
+.product-desc {
+    width: 100%;
+    text-align: center;
+    strong {
+        font-size: 24px;
+        font-weight: 350;
+    }
+    p {
+        color: #24242480;
+        font-size: 14px;
+    }
 }
