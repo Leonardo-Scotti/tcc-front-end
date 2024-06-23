@@ -9,6 +9,9 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* Estilização do Header */
+
 a {
     text-decoration: none;
     transition: .5s;
@@ -71,6 +74,9 @@ menu a:hover {
     color: #fafafa;
 }
 
+
+/* Fim da estilização do Header */
+
 main {
     width: 100%;
     margin: 0 auto;
@@ -99,7 +105,7 @@ section:not(#start) {
 }
 
 
-/* Estilização section products */
+/* Estilização section Produtos */
 
 #products {
     width: 100%;
@@ -155,6 +161,9 @@ section:not(#start) {
 }
 
 
+/* Fim da estilização da section Produtos */
+
+
 /* Estilização da section promotions */
 
 #promotions {
@@ -208,4 +217,133 @@ section:not(#start) {
         color: #24242480;
         font-size: 14px;
     }
+}
+
+
+/* Fim da estilização da section Promoções */
+
+
+/* Estilização do detalhe dos Produtos*/
+
+.details-sweatshirt {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.detail-foto-sweatshirt {
+    width: 720px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.large {
+    width: 720px;
+    border-radius: 16px;
+}
+
+.large-img {
+    width: 100%;
+}
+
+.large-img img {
+    width: 100%;
+}
+
+.thumbs {
+    width: 500px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumb {
+    width: 60px;
+}
+
+.thumb img {
+    width: 100%;
+}
+
+.detail-price-sweatshirt {
+    width: 500px;
+}
+
+.detail-price-sweatshirt p {
+    font-size: 15px;
+}
+
+.detail-price-sweatshirt:not(.price .tamanho) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    strong {
+        font-size: 25px;
+        font-weight: 550;
+    }
+    border: 1px solid black;
+    background-color: #f2f2f2;
+}
+
+.tamanho {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    gap: 10px;
+    padding: 12px 24px 0px;
+    border: 1px solid black;
+}
+
+.selector {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selector button {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border: none;
+    border: 1px solid black;
+}
+
+.selector button p {
+    font-size: 20px;
+}
+
+.selector button:checked {
+    background-color: black;
+    color: #fafaaf;
+}
+
+.esgotado {
+    width: 250px;
+    height: 60px;
+    margin-left: 80px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
 }
