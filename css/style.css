@@ -13,8 +13,10 @@ html {
 /* Estilização do Header */
 
 a {
+    color: black;
     text-decoration: none;
     transition: .5s;
+    cursor: pointer;
 }
 
 header {
@@ -25,6 +27,10 @@ header {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    background-color: #fafafa;
 }
 
 nav {
@@ -79,7 +85,7 @@ menu a:hover {
 
 main {
     width: 100%;
-    margin: 0 auto;
+    margin: 60px auto 0px auto;
 }
 
 footer {
@@ -140,11 +146,11 @@ section:not(#start) {
     width: 273px;
     height: 394px;
     overflow: hidden;
+    box-shadow: 0px 0px 5px black;
 }
 
 .product-img img {
     width: 100%;
-    box-shadow: 0px 0px 5px black;
 }
 
 .product-desc {
@@ -195,15 +201,15 @@ section:not(#start) {
     transform: scale(1.03);
 }
 
-.pro-img {
+.promotion-img {
     width: 273px;
     height: 394px;
     overflow: hidden;
+    box-shadow: 0px 0px 5px black;
 }
 
 .promotion-img img {
     width: 100%;
-    box-shadow: 0px 0px 5px black;
 }
 
 .promotion-desc {
@@ -272,11 +278,12 @@ section:not(#start) {
     width: 60px;
     height: 60px;
     box-shadow: 0px 0px 5px black;
+    cursor: pointer;
 }
 
 .thumb:hover {
     box-shadow: 0px 0px 8px;
-    transform: scale(1.0);
+    transform: scale(1.1);
 }
 
 .thumb img {
@@ -287,7 +294,6 @@ section:not(#start) {
     width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .detail-price-products p {
@@ -316,7 +322,9 @@ section:not(#start) {
     height: 200px;
     gap: 10px;
     padding: 12px 24px 0px;
-    border: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .selector {
@@ -327,21 +335,23 @@ section:not(#start) {
     gap: 10px;
 }
 
-.selector button {
-    width: 45px;
-    height: 45px;
-    background-color: white;
-    border: none;
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    width: 35px;
+    height: 35px;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
 }
 
-.selector button p {
-    font-size: 20px;
-}
-
-.selector button:checked {
+input[type="radio"]:checked+label {
     background-color: black;
-    color: #fafaaf;
+    color: #fafafa;
 }
 
 .esgotado {
@@ -369,43 +379,115 @@ section:not(#start) {
 }
 
 .container-contact {
-    width: 600px;
-    height: 200px;
-    padding: 20px 25px;
+    width: 300px;
+    height: 300px;
     background-color: #f0f0f0;
-    border-radius: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 8px black;
+}
+
+.container-contact form {
+    padding: 16px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    gap: 8px;
 }
 
-.container-contact h2 {
-    text-transform: uppercase;
-}
-
-input {
-    border-radius: 3px;
-}
-
-input[type="text"]:not(#contact-name) {
-    width: 200px;
-    height: 60px;
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 26px;
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 input:focus {
     outline: none;
     border: 1px solid black;
+    box-shadow: 0px 0px 4px black;
 }
 
-.form {
-    display: flex;
+input::placeholder {
+    color: #2a2a2a;
 }
 
-.name-email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+input[type="submit"] {
+    width: 180px;
+    height: 30px;
+    color: #fafafa;
+    background-color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.persistente {
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fafafa;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.round {
+    border-radius: 12px;
+}
+
+input:checked+.slider {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+input:checked+.slider::before {
+    transform: translateX(24px);
+}
+
+.slider::after {
+    content: "Mantenha-me conectado";
+    color: black;
+    width: 200px;
+    left: 52px;
+    position: absolute;
 }
