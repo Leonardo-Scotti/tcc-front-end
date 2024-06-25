@@ -225,7 +225,7 @@ section:not(#start) {
 
 /* Estilização do detalhe dos Produtos*/
 
-.details-sweatshirt {
+.details-products {
     width: 1280px;
     margin: 0 auto;
     padding: 32px 0;
@@ -234,7 +234,7 @@ section:not(#start) {
     gap: 50px;
 }
 
-.detail-foto-sweatshirt {
+.detail-foto-products {
     width: 720px;
     display: flex;
     gap: 15px;
@@ -250,10 +250,14 @@ section:not(#start) {
 
 .large-img {
     width: 100%;
+    height: 1080px;
+    box-shadow: 0px 0px 8px black;
+    transition: 0.5s;
 }
 
 .large-img img {
     width: 100%;
+    transition: 0.5s;
 }
 
 .thumbs {
@@ -266,30 +270,34 @@ section:not(#start) {
 
 .thumb {
     width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.thumb:hover {
+    box-shadow: 0px 0px 8px;
+    transform: scale(1.0);
 }
 
 .thumb img {
     width: 100%;
 }
 
-.detail-price-sweatshirt {
-    width: 500px;
-}
-
-.detail-price-sweatshirt p {
-    font-size: 15px;
-}
-
-.detail-price-sweatshirt:not(.price .tamanho) {
+.detail-price-products {
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.detail-price-products p {
+    font-size: 15px;
+}
+
 .price {
     width: 100%;
     height: 100px;
-    padding: 12px;
+    padding: 12px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,4 +354,58 @@ section:not(#start) {
     justify-content: center;
     text-transform: uppercase;
     font-size: 20px;
+}
+
+
+/* Fim da estilização do detalhe dos Produtos */
+
+
+/* Estilização da seção Contato */
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-contact {
+    width: 600px;
+    height: 200px;
+    padding: 20px 25px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.container-contact h2 {
+    text-transform: uppercase;
+}
+
+input {
+    border-radius: 3px;
+}
+
+input[type="text"]:not(#contact-name) {
+    width: 200px;
+    height: 60px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+.form {
+    display: flex;
+}
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
