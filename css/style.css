@@ -30,7 +30,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 20;
-    background-color: #fafafa;
+    background-color: white;
 }
 
 nav {
@@ -339,7 +339,7 @@ input[type="radio"] {
     display: none;
 }
 
-label {
+.selector label {
     width: 35px;
     height: 35px;
     border: 1px solid black;
